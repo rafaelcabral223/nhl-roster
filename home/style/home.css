@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: #0000ff;
+    margin-bottom: 55px;
+}
+
+.main {
+    margin: 20px;
+}
+
+.team-name {
+    width: 500px;
+    height: 30px;
+    display: block;
+    margin-right: auto;
+}
+
+.enterprise-logo {
+    width: 150px;
+    display: block;
+    margin: auto;
+    height: 56px;
+    margin: 30px;
+}
+
+.team-logo {
+    width: 150px;
+    height: 56px;
+}
+
+.body {
+    background: #1b1b1b;
+    
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.position-header {
+    color: var(--text-color);
+    display: block;
+    text-align: center;
+    font-family: Chakra Petch;
+    font-size: 3rem;
+}
+
+.footer {
+    background-color: blue;
+    display: block;
+    margin-top: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    padding: 1.5rem;
+    color: var(--text-color);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+}
+
+.nhl-logo-footer {
+    height: 1.75rem;
+    display: block;
+    margin: auto;
+}
+  
