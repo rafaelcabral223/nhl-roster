@@ -21,11 +21,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
-    float: left;
-    width: calc(33% - 15px);
-    margin: 0.25rem;
-=======
 }
 
 .card {
@@ -34,7 +29,6 @@
     color: var(--text-color);
     padding: 1rem;
     margin: 1rem;
->>>>>>> test
     box-sizing: border-box;
 }
   

@@ -7,43 +7,14 @@ function createPlayersCard(player) {
 
     const imgSrc = `https://assets.nhle.com/mugs/nhl/20222023/STL/${player.person.id}.png`;
 
-<<<<<<< HEAD
-         const players = datas.map((user, index, array) => {
-            const getPersonalLink = `https://statsapi.web.nhl.com/api/v1/people/${user.person.id}`
-            
-             const html = `
-                    <div class="card">
-                        <div class="player">
-                            <img class="player-img" src="https://assets.nhle.com/mugs/nhl/20222023/STL/${user.person.id}.png">
-                            <p class="player-info person-fullname">Player: ${user.person.fullName}</p>
-                            <p class="player-info person-jerseynumber">#${user.jerseyNumber}</p>
-                            <p class="player-info person-position-code">Pos: ${user.position.code}</p>
-                            <!-- <p class="player-info person-id">${getPersonalLink}</p> -->
-                        </div>
-                    </div>
-                `
-=======
     const playerImg = document.createElement('img');
     playerImg.classList.add('player-img');
     playerImg.src = imgSrc;
->>>>>>> test
 
     const playerName = document.createElement('p');
     playerName.classList.add('player-info', 'person-fullname');
     playerName.textContent = `${player.person.fullName}`;
 
-<<<<<<< HEAD
-            if (user.position.type === "Defenseman") {
-                document.getElementById('defensePlayers').innerHTML += html 
-            }
-                
-            if (user.position.type === "Forward") {
-                document.getElementById('forwardPlayers').innerHTML += html 
-            }
-        })
-            
-       console.log(datas)
-=======
     const jerseyNumber = document.createElement('p');
     jerseyNumber.classList.add('player-info', 'person-jerseynumber');
     jerseyNumber.textContent = `#${player.jerseyNumber}`;
@@ -83,7 +54,6 @@ function createPlayersCard(player) {
 
 async function getPlayers() {
     const response = await fetch('https://statsapi.web.nhl.com/api/v1/teams/19?expand=team.roster');
->>>>>>> test
     
     const data = await response.json();
     const players = data.teams[0].roster.roster;

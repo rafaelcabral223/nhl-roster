@@ -12,14 +12,11 @@
     margin-bottom: 2.25rem;
 }
 
-<<<<<<< HEAD
-=======
 .team-logo {
     width: 150px;
     height: 56px;
 }
 
->>>>>>> test
 .team-name {
     width: 500px;
     height: 30px;
@@ -41,17 +38,7 @@
     background: #1b1b1b;
 }
 
-<<<<<<< HEAD
-.position-header {
-    color: var(--text-color);
-    display: block;
-    text-align: center;
-    font-family: Chakra Petch;
-    font-size: 3rem;
-}
-=======
 /* FOOTER */
->>>>>>> test
 
 .footer {
     background-color: var(--secondary-color);
