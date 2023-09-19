@@ -45,22 +45,3 @@ async function getPlayers() {
 
 
 getPlayers();
-
-
-
-
-
-
-
-
-                    // `
-                    //     <div class="card">
-                    //         <div class="player">
-                    //             <img class="player-img" src="https://assets.nhle.com/mugs/nhl/20222023/STL/${user.person.id}.png">
-                    //             <p class="player-info person-fullname">Player: ${user.person.fullName}</p>
-                    //             <p class="player-info person-jerseynumber">#${user.jerseyNumber}</p>
-                    //             <p class="player-info person-position-code">Pos: ${user.position.code}</p>
-                    //             <!-- <p class="player-info person-id">${getPersonalLink}</p> -->
-                    //         </div>
-                    //     </div>
-                    // `
