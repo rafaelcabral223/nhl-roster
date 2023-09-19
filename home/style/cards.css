@@ -69,5 +69,12 @@
 
 
 .player:hover {
-    background-color: green;
+    transform: scale(1.15);
+    transition: 0.25s;
+    box-shadow: 14px 11px 5px black;
+}
+
+.player:not(:hover) {
+    transform: scale(1);
+    transition: 0.5s;
 }
