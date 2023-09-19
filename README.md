@@ -1,3 +1,3 @@
 RESOLVER HOVER PLAYERS
 
-HTML e JS prontos
+HTML e JS prontos!
