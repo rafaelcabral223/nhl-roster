@@ -34,22 +34,20 @@ function createPlayersCard(player) {
     playerInfo.appendChild(positionName);
 
     if(player.position.type === "Goalie") {
-        console.log(playerInfo)
         card.appendChild(playerInfo);
         document.querySelector('#goalie').appendChild(card);
     }
 
     if(player.position.type === "Defenseman") {
-        console.log(playerInfo)
         card.appendChild(playerInfo);
         document.querySelector('#defenseman').appendChild(card);
     }
 
     if(player.position.type === "Forward") {
-        console.log(playerInfo)
         card.appendChild(playerInfo);
         document.querySelector('#forward').appendChild(card);
     }
+
 }
 
 async function getPlayers() {
@@ -58,7 +56,8 @@ async function getPlayers() {
     const data = await response.json();
     const players = data.teams[0].roster.roster;
 
-    players.forEach(createPlayersCard);  
+    players.forEach(createPlayersCard);
 }
 
 getPlayers();
+
