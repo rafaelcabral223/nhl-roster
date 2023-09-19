@@ -1,6 +1,7 @@
 :root {
     --text-color: #f3f3f3; /* Cor do texto principal */
-    --background-color: #1b1b1b; /* Cor primária */
-    --secondary-color: #0000ff; /* Cor secundária */
+    --background-color: #041E42; /* Cor primária */
+    --secondary-color: #002F87; /* Cor secundária */
+    --third-color: #FCB514; /* Cor secundária */
     --background-card-color: #757575;
   }
