@@ -4,25 +4,70 @@
     margin: 0;
     padding: 0;
   }
-  
-  #roster {
+
+.position-header {
+    color: var(--text-color);
+    width: 100%;
+    text-align: center;
+    font-family: Chakra Petch;
+    font-size: 4rem;
+}
+
+.position {
+    max-width: 95%;
+    margin: 1rem auto;
+    padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem;
-  }
-  
-  .player {
-    background-color: #eaeaea;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 27%;
+    font-family: Open Sans;
+    color: var(--text-color);
+    padding: 1rem;
     margin: 1rem;
-    padding: 1rem 1.5rem;
-    width: 11rem;
-  }
+    box-sizing: border-box;
+}
   
-  .player h2 {
-    margin-bottom: .75rem;
-  }
+.player {
+  background-color: var(--background-card-color);
+  border-radius: 1rem;
+  border: 1px solid var(--secondary-color);
+  height: 100%;
+  width: 100%;
+}
   
-  .player img {
-    width: 8rem;
-    height: auto;
+.player img {
+  width: 12rem;
+  margin: auto;
+  display: block;
+  height: auto;
+}
+
+.player-info {
+    display: block;
+    text-align: center;
+    font-family: Chakra Petch;
+    margin: 0.25rem;
+}
+
+.person-fullname {
+    font-weight: bold;
+    display: block;
+    font-size: 1.75rem;
+}
+
+.person-jerseynumber,
+.person-position-name {
+    display: block;
+    font-size: 1rem;
+}
+
+
+
+.player:hover {
+    background-color: green;
 }

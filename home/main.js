@@ -13,23 +13,43 @@ function createPlayersCard(player) {
 
     const playerName = document.createElement('p');
     playerName.classList.add('player-info', 'person-fullname');
-    playerName.textContent = `Player: ${player.person.fullName}`;
+    playerName.textContent = `${player.person.fullName}`;
 
     const jerseyNumber = document.createElement('p');
     jerseyNumber.classList.add('player-info', 'person-jerseynumber');
     jerseyNumber.textContent = `#${player.jerseyNumber}`;
 
-    const positionCode = document.createElement('p');
-    positionCode.classList.add('player-info', 'person-position-code');
-    positionCode.textContent = `Pos: ${player.position.code}`;
+    const positionType = document.createElement('p');
+    positionType.classList.add('player-info', 'person-position-type');
+    //positionType.textContent = `Position Type: ${player.position.type}`;
+
+    const positionName = document.createElement('p');
+    positionName.classList.add('player-info', 'person-position-name');
+    positionName.textContent = `Position: ${player.position.name}`;
 
     playerInfo.appendChild(playerImg);
     playerInfo.appendChild(playerName);
     playerInfo.appendChild(jerseyNumber);
-    playerInfo.appendChild(positionCode);
+    playerInfo.appendChild(positionType);
+    playerInfo.appendChild(positionName);
 
-    card.appendChild(playerInfo);
-    document.querySelector('#roster').appendChild(card);
+    if(player.position.type === "Goalie") {
+        console.log(playerInfo)
+        card.appendChild(playerInfo);
+        document.querySelector('#goalie').appendChild(card);
+    }
+
+    if(player.position.type === "Defenseman") {
+        console.log(playerInfo)
+        card.appendChild(playerInfo);
+        document.querySelector('#defenseman').appendChild(card);
+    }
+
+    if(player.position.type === "Forward") {
+        console.log(playerInfo)
+        card.appendChild(playerInfo);
+        document.querySelector('#forward').appendChild(card);
+    }
 }
 
 async function getPlayers() {
@@ -38,10 +58,7 @@ async function getPlayers() {
     const data = await response.json();
     const players = data.teams[0].roster.roster;
 
-    players.forEach(createPlayersCard);
-
-    
+    players.forEach(createPlayersCard);  
 }
-
 
 getPlayers();
