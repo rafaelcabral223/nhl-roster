@@ -1,52 +1,66 @@
-const nome = document.getElementById('name');
- 
-fetch('https://statsapi.web.nhl.com/api/v1/teams/19?expand=team.roster').then(resposta => {
-    return resposta.json();
-})
+function createPlayersCard(player) {
+    const card = document.createElement('div');
+    card.classList.add('card');
 
+    const playerInfo = document.createElement('div');
+    playerInfo.classList.add('player');
 
-.then(data => {
-        const datas = data.teams[0].roster.roster
-        
+    const imgSrc = `https://assets.nhle.com/mugs/nhl/20222023/STL/${player.person.id}.png`;
 
-            datas.forEach(user => {
-                const getPersonalLink = `https://statsapi.web.nhl.com/api/v1/people/${user.person.id}`;
+    const playerImg = document.createElement('img');
+    playerImg.classList.add('player-img');
+    playerImg.src = imgSrc;
 
-                const html = `
-                    <div class="card ${user.position.type}">
-                        <div class="player">
-                            <img class="player-img" src="https://assets.nhle.com/mugs/nhl/20222023/STL/${user.person.id}.png">
-                            <p class="player-info person-fullname">Player: ${user.person.fullName}</p>
-                            <p class="player-info person-jerseynumber">#${user.jerseyNumber}</p>
-                            <p class="player-info person-position-code">Pos: ${user.position.code}</p>
-                            <!-- <p class="player-info person-id">${getPersonalLink}</p> -->
-                        </div>
-                    </div>
-                `
+    const playerName = document.createElement('p');
+    playerName.classList.add('player-info', 'person-fullname');
+    playerName.textContent = `Player: ${player.person.fullName}`;
 
-            if (user.position.type === "Goalie") {
-                document.getElementById('goaliePlayers').innerHTML += 
-                `
-                        ${html}
-                        <!-- Aqui serão exibidos os jogadores Goalie -->
-                `
-            }
+    const jerseyNumber = document.createElement('p');
+    jerseyNumber.classList.add('player-info', 'person-jerseynumber');
+    jerseyNumber.textContent = `#${player.jerseyNumber}`;
 
-            if (user.position.type === "Defenseman") {
-                console.log('oi')
-            }
-                
-            if (user.position.type === "Forward") {
-                console.log('oi')
-            }
-        })
-            
-       console.log(datas)
+    const positionCode = document.createElement('p');
+    positionCode.classList.add('player-info', 'person-position-code');
+    positionCode.textContent = `Pos: ${player.position.code}`;
+
+    playerInfo.appendChild(playerImg);
+    playerInfo.appendChild(playerName);
+    playerInfo.appendChild(jerseyNumber);
+    playerInfo.appendChild(positionCode);
+
+    card.appendChild(playerInfo);
+    document.querySelector('#roster').appendChild(card);
+}
+
+async function getPlayers() {
+    const response = await fetch('https://statsapi.web.nhl.com/api/v1/teams/19?expand=team.roster');
     
-})
+    const data = await response.json();
+    const players = data.teams[0].roster.roster;
+
+    players.forEach(createPlayersCard);
+
+    
+}
+
+
+getPlayers();
 
 
 
 
 
 
+
+
+                    // `
+                    //     <div class="card">
+                    //         <div class="player">
+                    //             <img class="player-img" src="https://assets.nhle.com/mugs/nhl/20222023/STL/${user.person.id}.png">
+                    //             <p class="player-info person-fullname">Player: ${user.person.fullName}</p>
+                    //             <p class="player-info person-jerseynumber">#${user.jerseyNumber}</p>
+                    //             <p class="player-info person-position-code">Pos: ${user.position.code}</p>
+                    //             <!-- <p class="player-info person-id">${getPersonalLink}</p> -->
+                    //         </div>
+                    //     </div>
+                    // `
