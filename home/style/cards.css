@@ -21,15 +21,14 @@
     height: auto;
 }
 
-
 .player-info {
     text-align: center;
 }
 
 .person-fullname {
     font-family: 'Righteous', sans-serif;
-  color: var(--text-color);
-  font-size: 1.4rem;
+    color: var(--text-color);
+    font-size: 1.4rem;
 }
 
 .person-jerseynumber {
@@ -39,8 +38,4 @@
 .person-position-code {
     display: block;
     margin: 0 auto;
-}
-
-.a {
-    background-color: pink;
 }
