@@ -4,13 +4,22 @@
     padding: 0;
 }
 
+/* HEADER */
 .header {
     display: flex;
     align-items: center;
     background-color: #0000ff;
-    margin-bottom: 55px;
+    margin-bottom: 2.25rem;
 }
 
+<<<<<<< HEAD
+=======
+.team-logo {
+    width: 150px;
+    height: 56px;
+}
+
+>>>>>>> test
 .team-name {
     width: 500px;
     height: 30px;
@@ -26,20 +35,13 @@
     margin: 30px;
 }
 
-.team-logo {
-    width: 150px;
-    height: 56px;
-}
+/* BODY */
 
 .body {
     background: #1b1b1b;
-    
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    margin: 0;
 }
 
+<<<<<<< HEAD
 .position-header {
     color: var(--text-color);
     display: block;
@@ -47,6 +49,9 @@
     font-family: Chakra Petch;
     font-size: 3rem;
 }
+=======
+/* FOOTER */
+>>>>>>> test
 
 .footer {
     background-color: var(--secondary-color);
