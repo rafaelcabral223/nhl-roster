@@ -18,31 +18,6 @@
     height: 56px;
 }
 
-.navbar {
-    display: flex;
-    list-style: none;
-}
-
-.navbar-li {
-    text-decoration: none;
-    color: var(--text-color);
-    font-family: Chakra Petch;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    margin: 0 2rem;
-}
-
-.navbar-li:hover {
-    color: var(--third-color);
-    transition: 0.25s;
-    cursor: pointer;
-}
-
-.navbar-li:not(:hover) {
-    transform: scale(1);
-    transition: 0.5s;
-}
-
 .enterprise-logo {
     width: 150px;
     display: block;
@@ -78,3 +53,21 @@
     margin: auto;
 }
   
+@media screen and (max-width: 350px) {
+    .header {
+        margin-bottom: 2rem;
+    }
+
+    .team-logo,
+    .enterprise-logo {
+        width: 80px;
+        height: 29px;
+    }
+    
+    .enterprise-logo {
+        display: block;
+        margin: auto;
+        margin: 15px;
+    }
+
+}

@@ -76,3 +76,148 @@
     transform: scale(1);
     transition: 0.5s;
 }
+
+@media screen and (max-width: 1420px) {
+    .position-header {
+        font-size: 3.75rem;
+    }
+
+    .card {
+        width: 30%;
+    }
+        
+    .player img {
+      width: 9rem;
+    }
+    
+    .person-fullname {
+        font-size: 1.25rem;
+    }
+}
+
+@media screen and (max-width: 1052px) {
+    .position-header {
+        font-size: 3rem;
+    }
+
+    .card {
+        width: 40%;
+    }
+        
+    .player img {
+      width: 12rem;
+    }
+    
+    .person-fullname {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 834px) {
+    .position-header {
+        font-size: 4rem;
+    }
+
+    .player:hover {
+        transform: none;
+        transition: none;
+        box-shadow: none;
+    }
+
+    .card {
+        width: 90%;
+        display: flex;
+        align-items: center;
+    }
+
+        
+    .player img {
+        width: 16rem;
+        float: left;
+    }
+    
+    .person-fullname {
+        font-size: 2.6rem;
+
+    }
+
+    .person-jerseynumber,
+    .person-position-name {
+        font-size: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 663px) {
+    .position-header {
+        font-size: 4rem;
+    }
+
+    .player:hover {
+        transform: none;
+        transition: none;
+        box-shadow: none;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+        
+    .player img {
+        width: 10rem;
+        float: left;
+    }
+    
+    .person-fullname {
+        font-size: 2rem;
+
+    }
+
+    .person-jerseynumber,
+    .person-position-name {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 485px) {
+    .position-header {
+        font-size: 3rem;
+    }
+
+    .player:hover {
+        transform: none;
+        transition: none;
+        box-shadow: none;
+    }
+
+    .card {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+        
+    .player img {
+        width: 100%;
+        float: left;
+    }
+    
+    .person-fullname {
+        font-size: 1.75rem;
+
+    }
+
+    .person-jerseynumber,
+    .person-position-name {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .position-header {
+        font-size: 2rem;
+    }
+}
