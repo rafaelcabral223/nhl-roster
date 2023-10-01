@@ -66,8 +66,6 @@
     font-size: 1rem;
 }
 
-
-
 .player:hover {
     transform: scale(1.15);
     transition: 0.25s;
