@@ -7,6 +7,6 @@
 | -------------  | --- |
 | :sparkles: Nome        | **St. Louis Blues Roster 23-24**
 | :label: Tecnologias | html, css, JavaScript
-| :rocket: URL         | ...
+| :rocket: URL         | https://nhl-roster.netlify.app
 
 I've developed a website displaying the 2023-24 roster of the ST. Louis Blues. This site presents player names, jersey numbers, and positions, utilizing an [NHL API](https://gitlab.com/dword4/nhlapi) to fetch and display the data for each player, ensuring real-time accuracy.
